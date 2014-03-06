@@ -6,6 +6,14 @@
 
 <div class="container">
   Check this out: <input type="text" ng-model="name" /> {{name}}
+  <hr>
+  <p>Angular Expressions: <ul>
+    <li> 1 + 3 is {{ 1 + 3 }}
+    <li> My current balance: {{ 1112.12 | currency }}
+    <li> foo == bar?: {{ "foo" == "bar" }}
+    <li> foo == foo?: {{ "foo" == "foo" }}
+    <li> LOWERCASE ME: {{ "LOWERCASE ME" | lowercase }}
+  </ul>
 </div>
 
 </body>

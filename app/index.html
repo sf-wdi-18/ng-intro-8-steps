@@ -19,17 +19,16 @@
   </ul>
 
   <hr>
-  <p>loops:
-  <div ng-init="names=['Steve','Ashley','Graham','Amy','Joel', 'Calvin']">
+  <p>Search: <input ng-model="query">
+
+  <div ng-init="names=['Steve','Ashley', 'Amanda' ,'Graham','Amy','Joel', 'Calvin']">
     <ul>
-      <li ng-repeat="name in names"> {{ name}}
+      <span ng-repeat="name in names | filter:query ">
+        <li>{{ name }}
+      </span>
     </ul>
   </div>
 
-  <hr>
-  <p>forms:
-   <p><input type=checkbox ng-checked="{{ 1 == 1}}" />
-   <p><input type=text ng-model="name" />
 </div>
 
 </body>

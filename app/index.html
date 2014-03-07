@@ -1,30 +1,33 @@
 <html ng-app>
   <head>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.14/angular.min.js"></script>
+    <script src ="simple_controller.js"></script>
   </head>
 <body>
 
-<div class="container">
-  Check this out: <input type="text" ng-model="name" /> {{name}}
+<div class="container" ng-controller="wdi.MainController">
+
+  <p>Controller says: {{ welcome }}
+
+  <p>Check this out: <input type="text" ng-model="name" /> {{name}}
 
   <hr>
   <p>Angular Expressions:
-  <ul>
+  <ul ng-controller="wdi.AccountController">
     <li> 1 + 3 is {{ 1 + 3 }}
-    <li> My current balance: {{ 1112.12 | currency }}
+    <li> My current balance: {{ my_balance | currency }}
     <li> foo == bar?: {{ "foo" == "bar" }}
-    <li> foo == foo?: {{ "foo" == "foo" }}
     <li> LOWERCASE ME: {{ "LOWERCASE ME" | lowercase }}
-    <li> Checked?: <input type=checkbox ng-checked="{{ 1 == 1 }}" />
+    <li> Need more $$$ ? <input type=checkbox ng-checked="{{ has_sufficient_funds }}" />
   </ul>
 
   <hr>
   <p>Loops:
   <p>Search: <input ng-model="query">
 
-  <div ng-init="names=['Steve','Ashley', 'Amanda' ,'Graham','Amy','Joel', 'Calvin']">
+  <div ng-model="students">
     <ul>
-      <span ng-repeat="name in names | filter:query ">
+      <span ng-repeat="name in students | filter:query ">
         <li>{{ name }}
       </span>
     </ul>

@@ -2,6 +2,15 @@
   <head>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.14/angular.min.js"></script>
     <script src ="simple_controller.js"></script>
+    <style>
+      .invalid {
+        border:2px solid red;
+      }
+      .valid {
+        border:2px solid green;
+      }
+    </style>
+
   </head>
 <body>
 
@@ -22,7 +31,6 @@
   </ul>
 
   <hr>
-  <p>Loops:
   <p>Search: <input ng-model="query">
 
   <div ng-model="students">
@@ -31,6 +39,13 @@
         <li>{{ name }}
       </span>
     </ul>
+  </div>
+
+  <hr>
+  <div ng-controller="wdi.ExchangeController">
+    Euros: <input type="text" ng-class="{valid: isNumber, invalid: !isNumber}" ng-model="euros" />
+    <button ng-click="convert()"> Convert </button>
+    {{ dollars | currency }}
   </div>
 
 </div>

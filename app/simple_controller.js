@@ -14,7 +14,7 @@ wdi.MainController = function($scope) {
 wdi.AccountController = function($scope) {
   var minimum = 1000;
   $scope.my_balance = 1221.78;
-  $scope.has_sufficient_funds = $scope.my_balance > minimum;
+  $scope.hasSufficientFunds = $scope.my_balance > minimum;
 };
 
 wdi.ExchangeController = function($scope, $location) {

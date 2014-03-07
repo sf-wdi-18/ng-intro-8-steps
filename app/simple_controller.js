@@ -5,7 +5,6 @@ wdi.demoApp = angular.module("demoApp", []);
 wdi.MainController = function($scope) {
   $scope.welcome = "Hello folks!";
   $scope.students = ['Steve','Ashley', 'Amanda' ,'Graham','Amy','Joel', 'Calvin'];
-
 };
 
 wdi.AccountController = function($scope) {
@@ -14,10 +13,7 @@ wdi.AccountController = function($scope) {
   $scope.has_sufficient_funds = $scope.my_balance > minimum;
 };
 
-wdi.ExchangeController = function($scope, $location) {
-
-  console.log($location.absUrl());
-
+wdi.ExchangeController = function($scope) {
   $scope.$watch('euros', function(newVal, oldVal) {
     $scope.isNumber = !isNaN(newVal);
   });

@@ -108,7 +108,7 @@ Modules and module injection
 
 Custom Modules: A date fomatter
 
-##Lab
+
 
 
 

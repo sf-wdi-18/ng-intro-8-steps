@@ -2,6 +2,8 @@
   <head>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.14/angular.min.js"></script>
     <script src="http://cdnjs.cloudflare.com/ajax/libs/sugar/1.3.9/sugar.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.6.0/underscore-min.js"></script>
+
     <script src ="filters.js"></script>
     <script src ="simple_controller.js"></script>
     <script src ="exchange_controller.js"></script>
@@ -41,7 +43,7 @@
   <div ng-model="students">
     <ul>
       <span ng-repeat="name in students | filter:query ">
-        <li>{{ name }}
+        <li>{{ name }} <button ng-click="byebye(name)">Delete</button>
       </span>
     </ul>
   </div>

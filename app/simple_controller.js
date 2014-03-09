@@ -13,4 +13,9 @@ wdi.SimpleController = function($scope) {
   var minimum = 1000;
   $scope.my_balance = 1221.78;
   $scope.hasSufficientFunds = $scope.my_balance > minimum;
+
+  // def byebye
+  $scope.byebye = function(who) {
+    $scope.students.splice(_.indexOf($scope.students, who),1);_
+  }
 };

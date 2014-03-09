@@ -4,6 +4,8 @@
     <script src="http://cdnjs.cloudflare.com/ajax/libs/sugar/1.3.9/sugar.min.js"></script>
     <script src ="filters.js"></script>
     <script src ="simple_controller.js"></script>
+    <script src ="exchange_controller.js"></script>
+
     <style>
       .invalid {
         border:2px solid red;
@@ -12,11 +14,10 @@
         border:2px solid green;
       }
     </style>
-
   </head>
 <body>
 
-<div class="container" ng-controller="wdi.MainController">
+<div class="container" ng-controller="wdi.SimpleController">
 
   <p>Here's a Date:  <strong>{{ aDate | relativeDate }}</strong>
 
@@ -26,7 +27,7 @@
 
   <hr>
   <p>Angular Expressions:
-  <ul ng-controller="wdi.AccountController">
+  <ul>
     <li> 1 + 3 is {{ 1 + 3 }}
     <li> My current balance: {{ my_balance | currency }}
     <li> foo == bar?: {{ "foo" == "bar" }}

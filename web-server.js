@@ -91,7 +91,6 @@ StaticServlet.prototype.handleRequest = function(req, res) {
     return String.fromCharCode(parseInt(hex, 16));
   });
   var parts = path.split('/');
-  console.log(parts);
   if (parts[parts.length-1] === '' ){
     return self.sendFile_(req, res, './app/index.html');
   }

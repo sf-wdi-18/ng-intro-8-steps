@@ -91,6 +91,9 @@ StaticServlet.prototype.handleRequest = function(req, res) {
     return String.fromCharCode(parseInt(hex, 16));
   });
   var parts = path.split('/');
+  if (parts[parts.length-1] === '' ){
+    return self.sendFile_(req, res, './app/index.html');
+  }
   if (parts[parts.length-1].charAt(0) === '.')
     return self.sendForbidden_(req, res, path);
   fs.stat(path, function(err, stat) {

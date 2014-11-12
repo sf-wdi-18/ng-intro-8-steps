@@ -1,4 +1,5 @@
-wdi.ExchangeController = function($scope) {
+demoApp.controller('ExchangeController', function($scope) {
+
   $scope.$watch('euros', function(newVal, oldVal) {
     $scope.isNumber = !isNaN(newVal);
   });
@@ -6,4 +7,5 @@ wdi.ExchangeController = function($scope) {
   $scope.convert = function() {
     $scope.dollars = $scope.euros * 1.35;
   };
-};
+
+});

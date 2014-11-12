@@ -1,8 +1,8 @@
 // A place for all my filters
 
-var filtersModule = angular.module('wdi.filters', []);
+// var filtersModule = angular.module('filters', []);
 
-filtersModule.filter("relativeDate", function() {
+demoApp.filter("relativeDate", function() {
   var relativeDateFunction = function(leDate) {
     if (leDate.isToday()) { return "Today"; }
     if (leDate.isYesterday()) { return "Yesterday"; }

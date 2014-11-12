@@ -4,9 +4,9 @@
     <script src="http://cdnjs.cloudflare.com/ajax/libs/sugar/1.3.9/sugar.min.js"></script>
     <script src="http://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.6.0/underscore-min.js"></script>
 
-    <script src ="filters.js"></script>
-    <script src ="simple_controller.js"></script>
-    <script src ="exchange_controller.js"></script>
+    <script src ="./app/simple_controller.js"></script>
+    <script src ="./app/exchange_controller.js"></script>
+    <script src ="./app/filters.js"></script>
 
     <style>
       .invalid {
@@ -19,7 +19,7 @@
   </head>
 <body>
 
-<div class="container" ng-controller="wdi.SimpleController">
+<div class="container" ng-controller="SimpleController">
 
   <p>Here's a Date:  <strong>{{ aDate | relativeDate }}</strong>
 
@@ -49,7 +49,7 @@
   </div>
 
   <hr>
-  <div ng-controller="wdi.ExchangeController">
+  <div ng-controller="ExchangeController">
     Euros: <input type="text" ng-class="{valid: isNumber, invalid: !isNumber}" ng-model="euros" />
     <button ng-click="convert()"> Convert </button>
     {{ dollars | currency }}

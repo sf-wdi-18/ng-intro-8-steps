@@ -4,89 +4,160 @@ Intro to AngularJS in seven steps
 
 ##Goals
 
-- Learn how to build a basic Angular App
-- Understand Angular MVVM and data-binding
+- Learn how to build web applications with Angular
+- Understand Angular module architecture and data-binding
 - Confidently use Angular expressions and directives
 - Learn how to create Angular controllers
+- Build simple Angular directive
 
 ##Intro
 
-How did we get here?
+Brief *history* of web apps:
 
+* First generation web apps: Super thin clients - fat servers.
+* Gmail: The desktop is over. *Desktop apps that happen to run in a browser*
+* The advent of JavaScript: Only programming language in every browser.
+* Powerful Desktop computers and Google's V8
+* Now: Fat Clients / thin servers
+
+Recommended reading: [Microsoft is dead](http://www.paulgraham.com/microsoft.html)
+
+**What is Angular?**
+
+AngularJS is a full-featured SPA framework that lets you extend HTML vocabulary for your application. It takes the notion ov **MVC** and takes it to the client. It demotes the server to an API service and place for static content / HTML templates.
 
 ##Step 1 - setup
 
-Fork: 
+Fork & clone: 
 
-	https://github.com/aikalima/wdi6-angular-intro
+	https://github.com/wdi-sf-fall/angular-in-seven-steps
 
-... and clone to your local workspace.	 cd into workspace.
 	
 Fire up webserver:
 
-	 node web-server.js
+	 npm start
 	 
-Got to:
+Go to [home page](http://localhost:8000)
 
-	http://localhost:8000/app/index.html
-	
+
+Inspect `app/index.html' and include angular library. Best place to get it from is [Google directly](https://developers.google.com/speed/libraries):
+
+The latest release is 1.3.2:
+
+`<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.2/angular.min.js"></script>`
+
+
 		 
-##Step 2 - expressions
+##Step 2 - directives
 
 	git checkout two
 	
-Include angular library in index.html:
+Teach HTML new tricks.
+	
+In Angular, we add behavior to our HTML through directives. A directive is a marker on a HTML tag that tells Angular to run or reference some Javascript code.
 
-	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.14/angular.min.js"></script>
+The ngApp directive - denotes the beginning of an application, and everything inside its tags will have access to binding. It attaches the Application Module to the page.
 
-ng-app: auto-bootstrap an angular application
+Angular extends HTML with its own set of tags, called directives. Angular directives start with the prfies **ng-**, for example: 
 
-	http://docs.angularjs.org/api/ng/directive/ngApp	
+`ng-app` turns ordinary HTML into an Angular application
+
+	http://docs.angularjs.org/api/ng/directive/ngApp
+
+`ng-model` binds an HTML element to a value / model		
+
+More on directives:
+
+	http://docs.angularjs.org/guide/directive
+	http://www.cheatography.com/proloser/cheat-sheets/angularjs/
+
+**Rule**: When using HTML tags/attributes, first look if angular offers a corresponding directive. If so, use it. For example:
+
+- a tag, href attribute: `ng-href` (demo)
+- img tag, src attribute: `ng-src` (demo)
+- class attribute: `ng-class`
+	
+	
+##Step 3 - expressions and filter
+
+
+Filter
+
+	http://docs.angularjs.org/api/ng/filter/filter
+	
 Angular expressions:
 
 	http://docs.angularjs.org/guide/expression
 
 Data binding:
-
-	http://docs.angularjs.org/guide/databinding
-
-Where are my templates?
 	
-	http://docs.angularjs.org/guide/templates
-	
-	
-##Step 3 - directives and filter
 
-Directives
+##Step 4 - arrays and loops
 
-	http://docs.angularjs.org/guide/directive
-	
-	http://www.cheatography.com/proloser/cheat-sheets/angularjs/
+1) setup array
 
-Filter
+```
+ <div ng-init="names=['Yoni','James', 'Yin' ,'Matt','Tim','Joe', 'Jack', 'Pete', 'Melody', 'David', 'Jacob']">
+```
 
-	http://docs.angularjs.org/api/ng/filter/filter
+2) ng-repeat
 
-##Step 4 - loops
+```
+ <span ng-repeat="name in names | filter:query ">
+        <li>{{ name }}
+      </span>
+```
+
+3) add search box
+
+	<p>Search: <input ng-model="query">
+
+
+4) add filter
+
+`| filter:query `
+
+      
 
 ngRepeat
 
 	http://docs.angularjs.org/api/ng/directive/ngRepeat
 
-Filter on data sets
 
   
 ##Step 5 - controller
 
-Where's the JavaScript? Controller ...
+Where's the JavaScript? In a controller ...
 
 	http://docs.angularjs.org/guide/controller
+	
+- Moving students out of view into controller.
+- Controller says welcome
+- **hasSufficientFunds**
+- Array notation
+
+Declare app module:
+
+	var demoApp = angular.module("demoApp", []);
+
+Add a controller:
+
+	demoApp.controller('SimpleController', function($scope) {
+		//...
+	});
+		
+Put #container div under the control of controller
+
+	<div class="container" ng-controller="SimpleController">
+
 
 Scope. The glue between model and view.
 
 	http://docs.angularjs.org/guide/scope
 
 ##Step 6 - events
+
+Exchange controller - euros/$$
 
 Events
 
@@ -102,11 +173,14 @@ layout example: ng-class
 
 ##Step 7 - modules
 
+cretea a date filter .. more on modules ..
+
+
 Modules and module injection
 
 	http://docs.angularjs.org/guide/module
 
-Custom Modules: A date fomatter
+Custom Modules: A date formatter
 
 
 

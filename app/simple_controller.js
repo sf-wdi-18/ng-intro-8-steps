@@ -16,4 +16,23 @@ demoApp.controller('SimpleController', function($scope) {
   $scope.my_balance = 1221.78;
   $scope.hasSufficientFunds = $scope.my_balance > minimum;
 
+
+	$scope.berlin_address = {
+	  addressLine1: 'Motz Strasse 29',
+	  addressLine2: '',
+	  city: 'Berlin',
+	  state: 'Berlin',
+	  postalCode: '10781',
+	  country: 'Germany'
+	};
+
+	$scope.sf_address = {
+	  addressLine1: '714 Guerrero',
+	  addressLine2: '',
+	  city: 'San Francisco',
+	  state: 'CA',
+	  postalCode: '94110',
+	  country: 'USA'
+	};
+
 });

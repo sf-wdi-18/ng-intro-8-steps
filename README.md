@@ -22,9 +22,9 @@ Brief *history* of web apps:
 
 Recommended reading: [Microsoft is dead](http://www.paulgraham.com/microsoft.html)
 
-**What is Angular?**
+**Enter Angular**
 
-AngularJS is a full-featured SPA framework that lets you extend HTML vocabulary for your application. It takes the notion ov **MVC** and takes it to the client. It demotes the server to an API service and place for static content / HTML templates.
+AngularJS is a full-featured SPA framework that lets you extend HTML vocabulary for your application. It takes the notion of **MVC** and takes it to the client. The server becomes an API service and place for static content / HTML templates.
 
 ##Step 1 - setup
 
@@ -48,11 +48,11 @@ The latest release is 1.3.2:
 
 
 		 
-##Step 2 - directives
+##Step 2 - data-binding & directives
 
 	git checkout two
 	
-Teach HTML new tricks.
+Directives teach HTML new tricks.
 	
 In Angular, we add behavior to our HTML through directives. A directive is a marker on a HTML tag that tells Angular to run or reference some Javascript code.
 
@@ -79,7 +79,6 @@ More on directives:
 	
 	
 ##Step 3 - expressions and filter
-
 
 
 Filter

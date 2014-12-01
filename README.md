@@ -4,20 +4,27 @@ Intro to AngularJS in seven steps
 
 ##Goals
 
-- Learn how to build a basic Angular App
-- Understand Angular MVVM and data-binding
+- Learn how to build web applications with Angular
+- Understand Angular module architecture and data-binding
 - Confidently use Angular expressions and directives
 - Learn how to create Angular controllers
+- Build simple Angular directive
 
 ##Intro
 
-How did we get here?
+Brief *history* of web apps:
+
+* First generation web apps: Super thin clients - fat servers.
+* Gmail: The desktop is over. *Desktop apps that happen to run in a browser*
+* The advent of JavaScript: Only programming language in every browser.
+* Powerful Desktop computers and Google's V8
+* Now: Fat Clients / thin servers
+
+Recommended reading: [Microsoft is dead](http://www.paulgraham.com/microsoft.html)
 
 **What is Angular?**
 
-AngularJS is a client-side Javascript framework for adding interactivity to HTML. It lets you use HTML as your template language and lets you extend HTML's syntax to express your application's components clearly and succinctly.
-
-
+AngularJS is a full-featured SPA framework that lets you extend HTML vocabulary for your application. It takes the notion ov **MVC** and takes it to the client. It demotes the server to an API service and place for static content / HTML templates.
 
 ##Step 1 - setup
 
@@ -45,7 +52,8 @@ The latest release is 1.3.2:
 
 	git checkout two
 	
-
+Teach HTML new tricks.
+	
 In Angular, we add behavior to our HTML through directives. A directive is a marker on a HTML tag that tells Angular to run or reference some Javascript code.
 
 The ngApp directive - denotes the beginning of an application, and everything inside its tags will have access to binding. It attaches the Application Module to the page.
@@ -120,10 +128,14 @@ ngRepeat
   
 ##Step 5 - controller
 
-Moving students to controller.
-Controller says welcome
-move hasSufficient funds moves in controller
-Array nottation
+Where's the JavaScript? In a controller ...
+
+	http://docs.angularjs.org/guide/controller
+	
+- Moving students out of view into controller.
+- Controller says welcome
+- **hasSufficientFunds**
+- Array notation
 
 Declare app module:
 
@@ -139,10 +151,6 @@ Put #container div under the control of controller
 
 	<div class="container" ng-controller="SimpleController">
 
-
-Where's the JavaScript? Controller ...
-
-	http://docs.angularjs.org/guide/controller
 
 Scope. The glue between model and view.
 

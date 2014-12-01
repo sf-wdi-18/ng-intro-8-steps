@@ -1,5 +1,5 @@
 // 1) Create an app module, once. It's the name of your application
-var demoApp = angular.module("demoApp", []);
+//var demoApp = angular.module("demoApp", []);
 
 // 2) Attach controller to the app module
 demoApp.controller('SimpleController', function($scope) {

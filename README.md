@@ -40,7 +40,7 @@ Fire up webserver:
 Go to [home page](http://localhost:8000)
 
 
-Inspect `app/index.html' and include angular library. Best place to get it is from [Google directly](https://developers.google.com/speed/libraries):
+Inspect `app/index.html' and include angular library. Best place to get it from is [Google directly](https://developers.google.com/speed/libraries):
 
 The latest release is 1.3.2:
 

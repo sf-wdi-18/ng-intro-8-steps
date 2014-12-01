@@ -12,6 +12,7 @@
 
   <p>Check this out: <input type="text" ng-model="name" /> {{name}}
 
+
   <hr>
   <p>Angular Expressions:
   <ul>
@@ -19,9 +20,8 @@
     <li> My current balance: {{ my_balance | currency }}
     <li> foo == bar?: {{ "foo" == "bar" }}
     <li> LOWERCASE ME: {{ "LOWERCASE ME" | lowercase }}
-    <li> Need more $$$ ? <input type=checkbox ng-checked="{{ hasSufficientFunds }}" />
+    <li> Do I have enough cash? <input type=checkbox ng-checked="{{ hasSufficientFunds }}" />
   </ul>
-
   <hr>
   <p>Loops:
   <p>Search: <input ng-model="query">

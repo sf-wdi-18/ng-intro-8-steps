@@ -10,5 +10,8 @@ demoApp.controller('SimpleController', function($scope) {
   var minimum = 1000;
   $scope.my_balance = 1221.78;
   $scope.hasSufficientFunds = $scope.my_balance > minimum;
+  $scope.hasSufficientFundsFunction = function(){
+  	return $scope.my_balance > minimum;
+  }
 
 });

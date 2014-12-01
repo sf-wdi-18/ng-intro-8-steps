@@ -44,13 +44,6 @@
     </ul>
   </div>
 
-  <hr>
-  <div ng-controller="ExchangeController">
-    Euros: <input type="text" ng-class="{valid: isNumber, invalid: !isNumber}" ng-model="euros" />
-    <button ng-click="convert()"> Convert </button>
-    {{ dollars | currency }}
-  </div>
-
 </div>
 
 </body>

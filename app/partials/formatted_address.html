@@ -1,0 +1,17 @@
+<div>
+    <!-- US address-->
+    <span ng-show="address.country == 'USA'">
+      <div ng-show="address.addressLine1">{{address.addressLine1}}<br/></div>
+      <div ng-show="address.addressLine2">{{address.addressLine2}}<br/></div>
+      {{address.city}}<span ng-hide="!address.city">,</span> {{address.state}} {{address.postalCode}}<br/>
+    </span>
+    <!-- German address-->
+    <span ng-show="address.country == 'Germany'">
+      <div ng-show="address.addressLine1">{{address.addressLine1}}<br/></div>
+      <div ng-show="address.addressLine2">{{address.addressLine2}}<br/></div>
+      {{address.postalCode}} {{address.city}}<br/>
+      {{address.country}}<br/>
+    </span>
+    <a target=_off href="https://maps.google.com/maps?q={{address.addressLine1}}+{{address.city}}+{{address.country}}+{{address.postalCode}}"><img src="http://cdn.iphoneincanada.ca/wp-content/uploads/2012/09/Google-Maps-icon.png" height="28" width="28"/></a>
+
+<div>
